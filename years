@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace rozdział_3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            //Zadanie 3.1
+            double year;
+            string choice;
+            Console.WriteLine("Program do sprawdzania czy podany rok jest przestępny!");
+            do
+            {                
+                Console.Write("Wpisz rok: ");
+                year = Convert.ToInt32(Console.ReadLine());
+
+                if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0))
+                    Console.WriteLine("Tak, rok {0} jest rokiem przestępnym.", year);
+                else
+                    Console.WriteLine("Nie, rok {0} nie jest rokiem przestępnym.", year);
+                Console.Write("\nSprawdzić inny rok? (t/n): ");
+                choice = Console.ReadLine();
+            } while (choice != "n");
+            Console.ReadKey();
+                   
